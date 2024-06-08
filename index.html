@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE MATRIX</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="button1.css">
-    <link rel="stylesheet" href="button2.css">
-    <link rel="stylesheet" href="news-bar.css">
+    -->
+    <link rel="stylesheet" href="css/button1.css">
+    <link rel="stylesheet" href="css/button2.css">
+    <link rel="stylesheet" href="css/news-bar.css">
+    <link rel="stylesheet" href="css/grid.css">
     <style>
+        :root {
+            --black: #1F1F1F;
+            --gap: 5px;
+        }
         * {
             padding: 0;
             margin: 0;
@@ -28,14 +36,23 @@
         <p>関節症のある庭</p>
     </div>
 
-    <!--css button2.css-->
-    <button style="right: 300px;" class="button-49 submit-token-btn" role="button">手漕ぎ鴨</button>
-
-    <!--css button1.css-->
-    <!--davide-->
-    <a href="inventory.html" class="button-52 submit-token-btn" role="button">手漕ぎ鴨</a>
-    <!--matteo
-    <button type="submit" class="button-52 submit-token-btn" role="button" onclick="location.href='inventory.html'">手漕ぎ鴨</button>
--->
+    <div class="grid-wrapper">
+        <div class="box a">
+            <img style="width: 100%; transform: scaleX(2) scaleY(1.2);" src="image/silver-head.gif" alt="">
+            <img style="width: 100%;" src="image/panino.gif" alt="">
+            <img style="width: 100%;" src="image/david.gif" alt="">
+        </div>
+        <div class="box b rooter" hx-get="/php/home.html" hx-trigger="load">
+            
+        </div>
+        <div class="box c">
+            <img style="width: 100%;" src="image/palmes.gif" alt="">
+            <img style="width: 100%; transform: scaleX(2) scaleY(1.2);" src="image/tyson-parks.gif" alt="">
+            <img style="width: 100%;" src="image/faces.jpeg" alt="">
+        </div>
+    </div>
+    <!--
+    <button class="button-49 submit-token-btn" role="button">手漕ぎ鴨</button>
+    -->
 </body>
 </html>
