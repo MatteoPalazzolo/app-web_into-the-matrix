@@ -45,8 +45,10 @@
     }
 }
 .news-bar > p {
-    color: #1F1;
-    font-size: 20px;
+    color: #000000;
+	font-style: italic;
+    font-size: 30px;
+	text-shadow: 2px 2px 3px #000000;
     animation: run 8s linear infinite;
 }
 @keyframes run {
