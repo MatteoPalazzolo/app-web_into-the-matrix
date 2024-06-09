@@ -1,6 +1,6 @@
 <style>
     .rooter .p1 {
-        font-size: 36vh;
+        font-size: 1000%;
         display: block;
     }
     .rooter .p2 {
@@ -19,6 +19,18 @@
 <div>
     <p class="p1"> 黒乳首 </p>
     <p class="p2"> 七面鳥の性のおもちゃのひよこ洗える柔らかい投球の鶏黄色い学生の減圧のギフト </p>
-    <img src="image/fishball.gif" alt="">
-    <img src="image/dolphin.gif" alt="">
+    <img draggable="false" src="image/fishball.gif" alt="">
+    <img draggable="false" src="image/dolphin.gif" alt="">
 </div>
+<script>
+    let audio = false;
+    $("body").on("click", function() {
+        if (!audio) {
+            let a = new Audio('audio/107 - Underwater Highway.mp3');
+            a.id = "soundtrack"
+            a.play();
+            console.log(a);
+            audio = true;
+        }
+    });
+</script>

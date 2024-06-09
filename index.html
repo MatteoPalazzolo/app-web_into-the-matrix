@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE MATRIX</title>
+    <!-- JS -->
     <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
-    <!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/button1.css">
     <link rel="stylesheet" href="css/button2.css">
     <link rel="stylesheet" href="css/news-bar.css">
@@ -20,6 +20,7 @@
         * {
             padding: 0;
             margin: 0;
+            user-select: none;
         }
         body {
             overflow: hidden;
@@ -38,17 +39,19 @@
 
     <div class="grid-wrapper">
         <div class="box a">
-            <img style="width: 100%; transform: scaleX(2) scaleY(1.2);" src="image/silver-head.gif" alt="">
-            <img style="width: 100%;" src="image/panino.gif" alt="">
-            <img style="width: 100%;" src="image/david.gif" alt="">
+            <img hx-get="/php/home.html" hx-target="#rooter" hx-trigger="click" 
+                draggable="false" style="width: 100%; transform: scaleX(2) scaleY(1.2);" src="image/silver-head.gif" alt="">
+            <img hx-get="/php/inventory.html" hx-target="#rooter" hx-trigger="click" 
+                draggable="false" style="width: 100%;" src="image/panino.gif" alt="">
+            <img draggable="false" style="width: 100%;" src="image/david.gif" alt="">
         </div>
-        <div class="box b rooter" hx-get="/php/home.html" hx-trigger="load">
+        <div id="rooter" class="box b rooter" hx-get="/php/home.html" hx-trigger="load">
             
         </div>
         <div class="box c">
-            <img style="width: 100%;" src="image/palmes.gif" alt="">
-            <img style="width: 100%; transform: scaleX(2) scaleY(1.2);" src="image/tyson-parks.gif" alt="">
-            <img style="width: 100%;" src="image/faces.jpeg" alt="">
+            <img draggable="false" style="width: 100%;" src="image/palmes.gif" alt="">
+            <img draggable="false" style="width: 100%; transform: scaleX(2) scaleY(1.2);" src="image/tyson-parks.gif" alt="">
+            <img draggable="false" style="width: 100%;" src="image/faces.jpeg" alt="">
         </div>
     </div>
     <!--
