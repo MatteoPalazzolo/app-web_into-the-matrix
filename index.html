@@ -30,6 +30,10 @@
             right: 20px;
             bottom: 20px;
         }
+        .banner-img {
+            cursor: pointer;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -39,23 +43,21 @@
 
     <div class="grid-wrapper">
         <div class="box a">
-            <img hx-get="/php/home.html" hx-target="#rooter" hx-trigger="click" 
-                draggable="false" style="width: 100%; transform: scaleX(2) scaleY(1.2);" src="image/silver-head.gif" alt="">
-            <img hx-get="/php/inventory.html" hx-target="#rooter" hx-trigger="click" 
-                draggable="false" style="width: 100%;" src="image/panino.gif" alt="">
-            <img draggable="false" style="width: 100%;" src="image/david.gif" alt="">
+            <img hx-get="/php/home.html" hx-target="#router" hx-trigger="click" 
+                class="banner-img" draggable="false" style="transform: scaleX(2) scaleY(1.2);" src="image/silver-head.gif" alt="">
+            <img hx-get="/php/login.html" hx-target="#router" hx-trigger="click" 
+                class="banner-img" draggable="false" src="image/panino.gif" alt="">
+            <img class="banner-img" draggable="false" src="image/david.gif" alt="">
         </div>
-        <div id="rooter" class="box b rooter" hx-get="/php/home.html" hx-trigger="load">
+        <div id="router" class="box b router" hx-get="/php/login.html" hx-trigger="load">
             
         </div>
         <div class="box c">
-            <img draggable="false" style="width: 100%;" src="image/palmes.gif" alt="">
-            <img draggable="false" style="width: 100%; transform: scaleX(2) scaleY(1.2);" src="image/tyson-parks.gif" alt="">
-            <img draggable="false" style="width: 100%;" src="image/faces.jpeg" alt="">
+            <img class="banner-img" draggable="false" src="image/palmes.gif" alt="">
+            <img class="banner-img" draggable="false" style="transform: scaleX(2) scaleY(1.2);" src="image/tyson-parks.gif" alt="">
+            <img class="banner-img" draggable="false" src="image/ico.gif" alt="">
         </div>
     </div>
-    <!--
-    <button class="button-49 submit-token-btn" role="button">手漕ぎ鴨</button>
-    -->
+
 </body>
 </html>
